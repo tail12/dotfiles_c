@@ -1,64 +1,27 @@
-nnoremap s <Nop>
-set fenc=utf-8
-set nobackup
-set noswapfile
-set autoread
-set hidden
-set showcmd
-
-set number
-set cursorline
-set cursorcolumn
-set virtualedit=onemore
-set smartindent
-set visualbell
-set showmatch
-set laststatus=2
-set wildmode=list:longest
-
-set list listchars=tab:\▸\-
-set expandtab
-set tabstop=2
-set shiftwidth=2
-
-set ignorecase
-set smartcase
-set incsearch
-set wrapscan
-set hlsearch
-set mouse=a
-
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
-let s:dein_dir = expand('~/.cache/dein')
-
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-
-
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+if has('vim_starting')
+  set rtp+=~/.vim/plugged/vim-plug
+  if !isdirectory(expand('~/.vim/plugged/vim-plug'))
+    echo 'install vim-plug...'
+    call system('mkdir -p ~/.vim/plugged/vim-plug')
+    call system('git clone https://github.com/junegunn/vim-plug.git ~/.vim/plugged/vim-plug/autoload')
+  end
 endif
 
+call plug#begin('~/.vim/plugged')
+  Plug 'junegunn/vim-plug',
+        \ {'dir': '~/.vim/plugged/vim-plug/autoload'}
+  " Vundle/NeoBundle と同じように
+  Plug 'junegunn/seoul256.vim'
 
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+  " コマンド実行時に読み込む
+  Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle'] }
 
-  let g:rc_dir    = expand('~/.vim/rc')
-  let s:toml      = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+  " golang 環境
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+call plug#end()
 
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-if dein#check_install()
-  call dein#install()
-endif
-
-syntax on
+source ~/dotfiles/.vimrc.alias
+source ~/dotfiles/.vimrc.apperance
+source ~/dotfiles/.vimrc.keymap
+source ~/dotfiles/.vimrc.basic
+source ~/dotfiles/.vimrc.moving

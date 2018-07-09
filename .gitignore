@@ -1,1 +1,5 @@
 .zplug/
+.vim/plugged
+.DS_Store
+.idea
+.vim/autoload
