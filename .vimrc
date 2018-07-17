@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
 
   " golang 環境
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'fatih/molokai'
 call plug#end()
 
 source ~/dotfiles/.vimrc.alias

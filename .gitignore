@@ -3,3 +3,4 @@
 .DS_Store
 .idea
 .vim/autoload
+.vim/.netrwhist
