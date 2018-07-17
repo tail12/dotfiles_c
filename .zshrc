@@ -11,5 +11,5 @@ if [[ -f $ZPLUG_HOME/init.zsh ]]; then
       echo; zplug install
     fi
   fi
-  zplug load
 fi
+
