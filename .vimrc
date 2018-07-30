@@ -26,3 +26,4 @@ source ~/dotfiles/.vimrc.apperance
 source ~/dotfiles/.vimrc.keymap
 source ~/dotfiles/.vimrc.basic
 source ~/dotfiles/.vimrc.moving
+source ~/dotfiles/.vimrc.indent
