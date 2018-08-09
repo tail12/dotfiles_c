@@ -11,6 +11,7 @@ export NODEBREW_ROOT=/usr/local/var/nodebrew
 ## golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+NODE_PATH=/usr/local/lib/node_module
 
 # zplug
 ZPLUG_HOME=~/dotfiles/.zplug
@@ -21,8 +22,11 @@ alias g=git
 alias stt='git status -uno'
 alias cmm='git commit -m'
 
+
+
 ## visual studio code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+source ~/.alias.secret
