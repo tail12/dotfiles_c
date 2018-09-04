@@ -1,7 +1,9 @@
 autoload -U compinit
 
 # 見える部分
-PROMPT='%m:%c %n$ '
+## PROMPT='%m:%c %n$ '
+PROMPT="%F{yellow}[%~]%f
+$ " 
 
 # PATH
 export PATH="$PATH:./node_modules/.bin"
