@@ -18,11 +18,15 @@ call plug#begin('~/.vim/plugged')
 
   " golang 環境
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
   Plug 'fatih/molokai'
+
+  " vim-indent-guides
+  Plug 'nathanaelkane/vim-indent-guides'
+  let g:indent_guides_enable_on_vim_startup = 1
 call plug#end()
 
-let g:go_fmt_commnad = "goimports"
+" filetypeの自動検出(最後の方に書いた方がいいらしい)
+filetype on
 
 source ~/dotfiles/.vimrc.alias
 source ~/dotfiles/.vimrc.apperance
