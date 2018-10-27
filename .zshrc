@@ -1,5 +1,6 @@
 DOTFILES=$HOME/dotfiles
 source $DOTFILES/.zprofile
+source $DOTFILES/.zstatusline
 
 # zplug
 ZPLUG_HOME=/usr/local/opt/zplug
