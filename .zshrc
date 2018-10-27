@@ -11,9 +11,17 @@ if ! zplug check --verbose; then
     echo; zplug install
   fi
 fi
-
-# plugins
+#
+## plugins
 zplug "plugins/git", from:oh-my-zsh
 zplug "zsh-users/zsh-autosuggestions"
 
-#zplug load --verbose
+zplug load --verbose
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/icchy/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/icchy/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/icchy/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/icchy/google-cloud-sdk/completion.zsh.inc'; fi
+
+
