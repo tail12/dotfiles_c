@@ -15,6 +15,17 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 NODE_PATH=/usr/local/lib/node_module
 
+## pip
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+
+## pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
+eval "$(pyenv init -)"
+
+## sam
+USER_BASE_PATH=$(python -m site --user-base)
+export PATH=$PATH:$USER_BASE_PATH/bin
+
 # zplug
 ZPLUG_HOME=~/dotfiles/.zplug
 
