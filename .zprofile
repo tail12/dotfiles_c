@@ -36,7 +36,7 @@ alias stt='git status -uno'
 alias cmm='git commit -m'
 
 # gcp
-alias kubectl='/usr/local/bin/kubectl'
+# alias kubectl='/usr/local/bin/kubectl'
 
 ## visual studio code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
