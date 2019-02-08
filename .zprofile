@@ -6,9 +6,17 @@ PROMPT="%F{yellow}[%~]%f
 $ " 
 
 # PATH
-export PATH="$PATH:./node_modules/.bin"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export NODEBREW_ROOT=/usr/local/var/nodebrew
+#export PATH="$PATH:./node_modules/.bin"
+#export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=/usr/local/var/nodebrew/current/bin:$PATH
+#export NODEBREW_ROOT=/usr/local/var/nodebrew
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+eval "$(pyenv virtualenv-init -)"
 
 ## golang
 export GOPATH=$HOME/go
@@ -25,6 +33,9 @@ eval "$(pyenv init -)"
 ## sam
 USER_BASE_PATH=$(python -m site --user-base)
 export PATH=$PATH:$USER_BASE_PATH/bin
+## gcloud
+source ~/google-cloud-sdk/completion.zsh.inc
+source ~/google-cloud-sdk/path.zsh.inc
 
 # zplug
 ZPLUG_HOME=~/dotfiles/.zplug
@@ -35,8 +46,12 @@ alias g=git
 alias stt='git status -uno'
 alias cmm='git commit -m'
 
+## golang
+alias lgo='GOOS=linux GOARCH=amd64 go'
+
 # gcp
 # alias kubectl='/usr/local/bin/kubectl'
+alias kubectl='~/google-cloud-sdk/bin/kubectl'
 
 ## visual studio code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
