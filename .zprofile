@@ -12,11 +12,11 @@ export PATH=/usr/local/var/nodebrew/current/bin:$PATH
 #export NODEBREW_ROOT=/usr/local/var/nodebrew
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-eval "$(pyenv virtualenv-init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+#
+#eval "$(pyenv virtualenv-init -)"
 
 ## golang
 export GOPATH=$HOME/go
@@ -27,15 +27,12 @@ NODE_PATH=/usr/local/lib/node_module
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 
 ## pyenv
-export PYENV_ROOT=/usr/local/var/pyenv
-eval "$(pyenv init -)"
+#export PYENV_ROOT=/usr/local/var/pyenv
+#eval "$(pyenv init -)"
 
 ## sam
 USER_BASE_PATH=$(python -m site --user-base)
 export PATH=$PATH:$USER_BASE_PATH/bin
-## gcloud
-source ~/google-cloud-sdk/completion.zsh.inc
-source ~/google-cloud-sdk/path.zsh.inc
 
 # zplug
 ZPLUG_HOME=~/dotfiles/.zplug
