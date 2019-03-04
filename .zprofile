@@ -62,3 +62,22 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH=/usr/local/Cellar/postgresql/10.5/bin:$PATH
 
 source ~/.alias.secret
+
+#####################
+# appearance
+#####################
+
+# Colors
+tab-color() {
+    echo -ne "\033]6;1;bg;red;brightness;$1\a"
+    echo -ne "\033]6;1;bg;green;brightness;$2\a"
+    echo -ne "\033]6;1;bg;blue;brightness;$3\a"
+}
+
+tab-reset() {
+    echo -ne "\033]6;1;bg;*;default\a"
+}
+
+# tile
+function chpwd() { ls; echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print "/"$1"/"$2}'| rev)\007"}
+
