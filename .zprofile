@@ -50,9 +50,15 @@ alias lgo='GOOS=linux GOARCH=amd64 go'
 # alias kubectl='/usr/local/bin/kubectl'
 alias kubectl='~/google-cloud-sdk/bin/kubectl'
 
+# kubectl
+alias k='kubectl'
+
 ## visual studio code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# psql
+export PATH=/usr/local/Cellar/postgresql/10.5/bin:$PATH
 
 source ~/.alias.secret
