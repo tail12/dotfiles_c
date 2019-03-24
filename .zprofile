@@ -23,6 +23,9 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 NODE_PATH=/usr/local/lib/node_module
 
+## flutter
+export PATH="$PATH:$HOME/dev/flutter/bin"
+
 ## pip
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 
@@ -47,8 +50,11 @@ alias cmm='git commit -m'
 alias lgo='GOOS=linux GOARCH=amd64 go'
 
 # gcp
-# alias kubectl='/usr/local/bin/kubectl'
-alias kubectl='~/google-cloud-sdk/bin/kubectl'
+alias kubectl='/usr/local/bin/kubectl'
+# alias kubectl='~/google-cloud-sdk/bin/kubectl'
+
+# kubectl
+alias k='kubectl'
 
 ## visual studio code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
@@ -56,3 +62,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 source ~/.alias.secret
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
