@@ -67,6 +67,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # psql
 export PATH=/usr/local/Cellar/postgresql/10.5/bin:$PATH
 
-source ~/.alias.secret
+source ./.alias.secret
 
 
