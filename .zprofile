@@ -21,6 +21,7 @@ export PATH=/usr/local/var/nodebrew/current/bin:$PATH
 ## golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export GOROOT=/usr/local/Cellar/go/1.12.5/libexec
 NODE_PATH=/usr/local/lib/node_module
 
 ## flutter
@@ -32,6 +33,10 @@ export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 ## pyenv
 #export PYENV_ROOT=/usr/local/var/pyenv
 #eval "$(pyenv init -)"
+
+## rbenv
+export PATH=~/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
 
 ## sam
 USER_BASE_PATH=$(python -m site --user-base)
