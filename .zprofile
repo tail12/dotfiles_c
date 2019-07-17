@@ -11,6 +11,9 @@ export LSCOLORS=DxGxcxdxCxegedabagacad
 # docker experimental
 export DOCKER_BUILDKIT=1
 
+# zsh_completions
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # PATH
 #export PATH="$PATH:./node_modules/.bin"
 #export PATH=$HOME/.nodebrew/current/bin:$PATH
