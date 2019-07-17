@@ -44,3 +44,4 @@ bindkey '^R' peco-history-selection
 alias dps='docker ps --format "{{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Command}}\t{{.RunningFor}}"'
 alias de='docker exec -it `dps | peco | cut -f 1` /bin/bash'
 alias -g cons='`docker ps -a|peco| cut -d" " -f 1`'
+

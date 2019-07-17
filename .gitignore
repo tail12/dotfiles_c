@@ -4,3 +4,4 @@
 .idea
 .vim/autoload
 .vim/.netrwhist
+.alias.secret
