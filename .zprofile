@@ -4,6 +4,12 @@ autoload -U compinit
 ## PROMPT='%m:%c %n$ '
 PROMPT="%F{yellow}[%~]%f
 $ " 
+# color
+export CLICOLOR=1
+export LSCOLORS=DxGxcxdxCxegedabagacad
+
+# docker experimental
+export DOCKER_BUILDKIT=1
 
 # PATH
 #export PATH="$PATH:./node_modules/.bin"
@@ -81,3 +87,4 @@ tab-reset() {
 # tile
 function chpwd() { ls; echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print "/"$1"/"$2}'| rev)\007"}
 
+alias cdev='cd $HOME/dev/github.com/lvgs/tool-Docker4Dev/'
