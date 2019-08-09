@@ -15,8 +15,8 @@ export DOCKER_BUILDKIT=1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # PATH
-#export PATH="$PATH:./node_modules/.bin"
-#export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$PATH:./node_modules/.bin"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=/usr/local/var/nodebrew/current/bin:$PATH
 #export NODEBREW_ROOT=/usr/local/var/nodebrew
 
@@ -102,3 +102,4 @@ tab-reset() {
 function chpwd() { ls; echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print "/"$1"/"$2}'| rev)\007"}
 
 alias cdev='cd $HOME/dev/github.com/lvgs/tool-Docker4Dev/'
+alias gchi='stack exec ghci'
