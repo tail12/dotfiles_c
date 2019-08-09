@@ -102,4 +102,4 @@ tab-reset() {
 function chpwd() { ls; echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print "/"$1"/"$2}'| rev)\007"}
 
 alias cdev='cd $HOME/dev/github.com/lvgs/tool-Docker4Dev/'
-alias gchi='stack exec ghci'
+alias ghci='stack exec ghci'
