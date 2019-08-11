@@ -44,4 +44,4 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
 let g:rehash256 = 1
 let g:molokai_original=1
-colorscheme molokai
+colorscheme iceberg
