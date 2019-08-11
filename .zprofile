@@ -103,3 +103,4 @@ function chpwd() { ls; echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print "/"$1"/"
 
 alias cdev='cd $HOME/dev/github.com/lvgs/tool-Docker4Dev/'
 alias ghci='stack exec ghci'
+alias ghc='stack exec ghc'
