@@ -73,6 +73,17 @@ alias k='kubectl'
 # kubectl
 alias k='kubectl'
 
+alias cdev='cd $HOME/dev/github.com/lvgs/tool-Docker4Dev/'
+
+# haskell
+alias ghci='stack exec ghci'
+alias ghc='stack exec ghc'
+
+# nvim
+alias vim='nvim'
+
+alias ide='~/dotfiles/.scripts/ide'
+
 ## visual studio code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -101,9 +112,3 @@ tab-reset() {
 # tile
 function chpwd() { ls; echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print "/"$1"/"$2}'| rev)\007"}
 
-alias cdev='cd $HOME/dev/github.com/lvgs/tool-Docker4Dev/'
-alias ghci='stack exec ghci'
-alias ghc='stack exec ghc'
-alias vim='nvim'
-
-alias ide='~/dotfiles/.scripts/ide'
