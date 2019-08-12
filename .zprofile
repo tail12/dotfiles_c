@@ -106,3 +106,4 @@ alias ghci='stack exec ghci'
 alias ghc='stack exec ghc'
 alias vim='nvim'
 
+alias ide='~/dotfiles/.scripts/ide'
