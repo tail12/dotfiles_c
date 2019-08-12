@@ -6,6 +6,7 @@ set autoindent   " 自動でインデント
 set smartindent
 
 " softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じBSにも影響する
+set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=0
 
 if has("autocmd")
