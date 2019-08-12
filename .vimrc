@@ -20,12 +20,23 @@ call plug#begin('~/.vim/plugged')
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'fatih/molokai'
 
-  " vim-indent-guides
-  Plug 'nathanaelkane/vim-indent-guides'
-  let g:indent_guides_enable_on_vim_startup = 1
-
   " color scheme
   Plug 'cocopon/iceberg.vim'
+
+  " commentary
+  Plug 'tpope/vim-commentary'
+
+  " complete plugin
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    let g:deoplete#enable_at_startup = 1
+
+    Plug 'deoplete-plugins/deoplete-jedi'
+    let g:deoplete#sources#jedi#server_timeout=100
+    let g:deoplete#sources#jedi#statement_length=100
+    " jedi側の補完をdisabled
+    let g:jedi#completions_enabled = 0
+  endif
 call plug#end()
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
@@ -37,3 +48,4 @@ source ~/dotfiles/.vimrc.keymap
 source ~/dotfiles/.vimrc.basic
 source ~/dotfiles/.vimrc.moving
 source ~/dotfiles/.vimrc.indent
+
