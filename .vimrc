@@ -26,6 +26,17 @@ call plug#begin('~/.vim/plugged')
 
   " color scheme
   Plug 'cocopon/iceberg.vim'
+
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    let g:deoplete#enable_at_startup = 1
+
+    Plug 'deoplete-plugins/deoplete-jedi'
+    let g:deoplete#sources#jedi#server_timeout=100
+    let g:deoplete#sources#jedi#statement_length=100
+    " jedi側の保管をdisabled
+    let g:jedi#completions_enabled = 0
+  endif
 call plug#end()
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
