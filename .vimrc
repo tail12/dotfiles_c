@@ -18,7 +18,16 @@ call plug#begin('~/.vim/plugged')
 
   " golang 環境
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  Plug 'fatih/molokai'
+  Plug 'prabirshrestha/async.vim'
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+  let g:lsp_diagnostics_enabled = 0
+  " debug
+  let g:lsp_log_verbose = 1
+  let g:lsp_log_file = expand('~/vim-lsp.log')
+  let g:asyncomplete_log_file = expand('~/asyncomplete.log')
 
   " color scheme
   Plug 'cocopon/iceberg.vim'
@@ -38,6 +47,15 @@ call plug#begin('~/.vim/plugged')
     let g:jedi#completions_enabled = 0
   endif
 call plug#end()
+
+" gopls
+if executable('gopls')
+  au User lsp_setup call lsp#register_server({
+      \ 'name': 'gopls',
+      \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+      \ 'whitelist': ['go'],
+      \ })
+endif
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 filetype on
