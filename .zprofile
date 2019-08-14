@@ -81,8 +81,9 @@ alias ghc='stack exec ghc'
 
 # nvim
 alias vim='nvim'
-
 alias ide='~/dotfiles/.scripts/ide'
+
+alias ll='ls -l'
 
 ## visual studio code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
