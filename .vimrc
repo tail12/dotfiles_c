@@ -34,7 +34,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'deoplete-plugins/deoplete-jedi'
     let g:deoplete#sources#jedi#server_timeout=100
     let g:deoplete#sources#jedi#statement_length=100
-    " jedi側の補完をdisabled
+    " jedi側の保管をdisabled
     let g:jedi#completions_enabled = 0
   endif
 call plug#end()

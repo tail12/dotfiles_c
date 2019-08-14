@@ -5,3 +5,4 @@
 .vim/autoload
 .vim/.netrwhist
 .alias.secret
+git_plugins/
