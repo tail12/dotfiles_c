@@ -30,7 +30,7 @@ export PATH=/usr/local/var/nodebrew/current/bin:$PATH
 ## golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-export GOROOT=/usr/local/Cellar/go/1.12.5/libexec
+export GOROOT=/usr/local/Cellar/go/1.12.8/libexec
 NODE_PATH=/usr/local/lib/node_module
 
 ## flutter
