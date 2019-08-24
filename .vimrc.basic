@@ -30,3 +30,8 @@ set guioptions+=a
 
 " ファイルタイプの判定をon
 filetype plugin on
+
+" yank to clip board
+set clipboard+=unnamed
+set clipboard+=unnamedplus
+
