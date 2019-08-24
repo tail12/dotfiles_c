@@ -29,6 +29,11 @@ call plug#begin('~/.vim/plugged')
   let g:lsp_log_file = expand('~/vim-lsp.log')
   let g:asyncomplete_log_file = expand('~/asyncomplete.log')
 
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+  " typescript
+  Plug 'leafgarland/typescript-vim'
+
   " color scheme
   Plug 'cocopon/iceberg.vim'
 
